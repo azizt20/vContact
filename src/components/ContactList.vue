@@ -1,5 +1,5 @@
 <template>
-  <ul v-if="props.contactList.length" class="border-t pt-5  ">
+  <ul v-if="props.contactList.length" class="border-t pt-5">
     <transition-group name="list">
       <li v-for="(contact, i) in props.contactList" :key="i" class="">
         <router-link
@@ -14,14 +14,14 @@
               </div>
             </div>
             <div class="w-full">
-              <div class="font-medium flex items-center justify-between">
-                <div class="name truncate">
+              <div class="font-medium grid grid-cols-5 items-center justify-between">
+                <div class="name truncate col-span-3 pr-4">
                   {{ contact.fullName }}
                   <span v-if="contact?.callIds?.length > 1">
                     ({{ contact.callIds.length }})
                   </span>
                 </div>
-                <div class="email font-normal truncate text-sm">
+                <div class="email font-normal truncate text-sm col-span-2 text-end">
                   {{ contact.email }}
                 </div>
               </div>
@@ -47,7 +47,7 @@
       </li>
     </transition-group>
   </ul>
-  <div v-else class=" text-2xl font-medium border-t pt-10 text-center">
+  <div v-else class="text-2xl font-medium border-t pt-10 text-center">
     Список пуст
   </div>
 </template>
