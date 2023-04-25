@@ -11,7 +11,7 @@
       </router-link>
     </h2>
 
-    <div class="mt-10">
+    <div class="mt-5">
       <div
         class="w-1/3 aspect-square bg-slate-600 rounded-full flex items-center justify-center text-8xl font-bold text-slate-100 mx-auto"
       >
@@ -155,7 +155,7 @@
         </div>
       </ul>
 
-      <div class="mt-10 text-center">
+      <div class="mt-7 text-center">
         <button
           @click="deleteThisContact"
           class="border border-red-500 hover:text-white hover:bg-red-500 px-10 py-3 rounded-lg text-red-500 transition-all font-medium"
