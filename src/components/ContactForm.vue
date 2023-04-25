@@ -104,12 +104,8 @@ const submitForm = () => {
     newContact.value.phone
   );
   if (
-    error.value.nameError ||
-    error.value.phoneError ||
-    error.value.emailError
+    !(error.value.nameError || error.value.phoneError || error.value.emailError)
   ) {
-    alert("yooo mayo");
-  } else {
     emit("submitForm", { ...newContact.value, initial: initial.value });
     newContact.value = {
       fullName: "",
